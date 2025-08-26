@@ -57,10 +57,8 @@ function App() {
 
               {/* Default redirect */}
               
-             {/*
-              <Route path="/" element={<Navigate to="/app" replace />} />
-              <Route path="*" element={<Navigate to="/app" replace />} />
-              */ }
+              <Route path="/" element={<Navigate to="/index" replace />} />
+              <Route path="*" element={<Navigate to="/index" replace />} />
             </Routes>
           </Router>
           <Toaster />
