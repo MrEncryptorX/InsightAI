@@ -1,0 +1,41 @@
+.settingsPage{
+    margin-left: 600px;
+    font-size: 30px;
+}
+
+.TitleSettings{
+    margin-top: 40px;
+}
+
+.user{
+    margin-right: 300px;
+    margin-top: 200px;
+}
+
+.dashboardsFavoritos p{
+    font-size: 20px;
+}
+
+.vozDeLeitura{
+    margin-top: 50px;
+}
+
+.vozDeLeitura p{
+    font-size: 20px;
+}
+
+.idiomaSettings{
+    margin-top: 50px;
+}
+
+.idiomaSettings p{
+    font-size: 20px;
+}
+
+.notificacoes{
+    margin-top: 50px;
+}
+
+.notificacoes p{
+    font-size: 20px;
+}
