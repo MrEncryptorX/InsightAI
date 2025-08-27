@@ -84,8 +84,22 @@ export function useDeleteDataset() {
 export function useDashboards() {
   return useQuery({
     queryKey: queryKeys.dashboards,
-    queryFn: () => apiClient.getDashboards(),
-    staleTime: 2 * 60 * 1000, // 2 minutes
+    queryFn: async () => {
+      try {
+        const response = await apiClient.getDashboards();
+        // Verifica se a resposta tem dados
+        if (response && response.data) {
+          return response.data;
+        }
+        return []; // Retorna array vazio se não houver dados
+      } catch (error) {
+        console.error('Erro ao buscar dashboards:', error);
+        return []; // Retorna array vazio em caso de erro
+      }
+    },
+    staleTime: 2 * 60 * 1000,
+    retry: 3,
+    retryDelay: 1000,
   });
 }
 

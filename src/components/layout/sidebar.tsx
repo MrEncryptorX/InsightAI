@@ -34,7 +34,6 @@ interface SidebarProps {
 export function Sidebar({ className }: SidebarProps) {
   const { t } = useTranslation(); // Hook para acessar traduções
   const { user, currentOrg, logout } = useAuth(); // Obtém usuário, organização atual e função de logout
-  const { settings } = useAuth();
   const { sidebarCollapsed } = useUIStore(); // Obtém estado de colapso da sidebar
   const navigate = useNavigate(); // Hook para navegação programática
 
@@ -72,7 +71,7 @@ export function Sidebar({ className }: SidebarProps) {
   const settingsNavItems =  [
     {
       title: t('navigation.settings'),
-      href: '/app/settings',
+      href: '/settings',
       icon: Settings,
     },
   ];

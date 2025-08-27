@@ -56,9 +56,8 @@ function App() {
               } />
 
               {/* Default redirect */}
-              
               <Route path="/" element={<Navigate to="/index" replace />} />
-              <Route path="*" element={<Navigate to="/index" replace />} />
+              <Route path="*" element={<div>404 - Página não encontrada</div>} />
             </Routes>
           </Router>
           <Toaster />
