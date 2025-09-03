@@ -7,6 +7,7 @@ import IconeTelefone from '../../components/icones/telefone'
 import IconeEmail from '../../components/icones/email'
 import IconeSocial from '../../components/icones/social'
 import IconeGrafico from '../../components/icones/grafico'
+import { Link } from 'react-router-dom';
 // Componente funcional AppIndexPage, responsável por redirecionar a rota inicial do app
 export function AppIndexPage() {
   
@@ -17,8 +18,8 @@ export function AppIndexPage() {
         <header className='cabecalho'>
             <h2 className='logo'>InsightAI</h2>
             <nav className='cabecalho-menu'>
-                <a href="/login" className='botao-login'>Login</a>
-                <a href="" className='botao-cadastro'>Cadastro</a>
+                <Link to="/login">Login</Link>
+                <Link to="/signup" className='botao-cadastro'>Cadastro</Link>
             </nav>
         </header>
         <div className="welcome-text">

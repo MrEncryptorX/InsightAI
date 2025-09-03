@@ -10,7 +10,7 @@ import { AuthGuard } from './components/auth/auth-guard';
 
 // Auth routes
 import { LoginPage } from './routes/auth/login';
-import { TelaCadastro } from './routes/auth/singup';
+import { TelaCadastro } from './routes/auth/signup';
 
 // App routes
 import  {AppIndexPage}  from './routes/app/index';
