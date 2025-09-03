@@ -10,6 +10,7 @@ import { AuthGuard } from './components/auth/auth-guard';
 
 // Auth routes
 import { LoginPage } from './routes/auth/login';
+import { TelaCadastro } from './routes/auth/singup';
 
 // App routes
 import  {AppIndexPage}  from './routes/app/index';
@@ -39,7 +40,7 @@ function App() {
               {/* Public routes */}
               <Route path="/index" element={<AppIndexPage />} />
               <Route path="/login" element={<LoginPage />} />
-              <Route path="/signup" element={<LoginPage />} />
+              <Route path="/signup" element={<TelaCadastro />} />
               <Route path="/forgot-password" element={<LoginPage />} />
               
               {/* Protected app routes */}

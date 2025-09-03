@@ -1,5 +1,12 @@
 //import { Navigate } from 'react-router-dom'; // Importa o componente Navigate do React Router para redirecionamento de rotas
 import './indexStyle.css'; // Importa o arquivo de estilos para a página de índice do app
+import IconeUpload from '../../components/icones/upload'
+import IconeAnalise from '../../components/icones/analise'
+import IconePrevisao from '../../components/icones/previsao'
+import IconeTelefone from '../../components/icones/telefone'
+import IconeEmail from '../../components/icones/email'
+import IconeSocial from '../../components/icones/social'
+import IconeGrafico from '../../components/icones/grafico'
 // Componente funcional AppIndexPage, responsável por redirecionar a rota inicial do app
 export function AppIndexPage() {
   
@@ -9,51 +16,57 @@ export function AppIndexPage() {
     <section>
         <header className='cabecalho'>
             <h2 className='logo'>InsightAI</h2>
-            <nav className='cabecalho_menu'>
-                <a href="../app/dashboards" className='menu_link'>Login</a>
+            <nav className='cabecalho-menu'>
+                <a href="/login" className='botao-login'>Login</a>
+                <a href="" className='botao-cadastro'>Cadastro</a>
             </nav>
         </header>
         <div className="welcome-text">
             <p>Bem vindo ao <strong>InsightAI</strong></p>
         </div>
-        <div className="about">
-            <h2 className="titulo_descricao">
+        <div className="descricao-produto">
+            <h2 className="titulo-descricao">
                 <strong>Descubra o poder da análise de <br />dados e previsões inteligentes <br />com o InsightAI.</strong>
             </h2>
+            <div className='Icone-grafico'>{<IconeGrafico />}</div>
             <p className="sobreNos">
                 Nossa plataforma oferece ferramentas avançadas para <br />transformar dados em insights valiosos.
             </p>
         </div>
 
-  {/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=    1°    -=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-==-=-=-=-=-==-=-=*/}
+  {/*Card das Funcionalidades*/}
 
       <div className="grid">
                 <div className="card">
                     <span className="icon">
                     </span>
-                    <h4 className="Titulo"><strong>UPLOAD DE DADOS</strong></h4>
-                    <p className="Paragrafo">Carregue seus dados e comece a análise imediatamente.</p>
+                    <h4 className="Titulo-card"><strong>UPLOAD DE DADOS</strong></h4>
+                    <p className="Frase-card">Carregue seus dados e comece a análise imediatamente.</p>
+                    <div className='Icone-upload'>{<IconeUpload />}</div>
                 </div>
 
                 <div className="card">
                     <span className="icon">
                     </span>
-                    <h4 className="Titulo"><strong>VER ANÁLISE BÁSICA</strong></h4>
-                    <p className="Paragrafo">Explore métricas fundamentais para entender seus dados.</p>
+                    <h4 className="Titulo-card"><strong>VER ANÁLISE BÁSICA</strong></h4>
+                    <p className="Frase-card">Explore métricas fundamentais para entender seus dados.</p>
+                    <div className='Icone-analise'>{<IconeAnalise />}</div>
                 </div>
 
                 <div className="card">
                     <span className="icon">
                     </span>
-                    <h4 className="Titulo"><strong>SOLICITAR PREVISÕES</strong></h4>
-                    <p className="Paragrafo">Utilize nossas ferramentas de previsão para tomar decisões.</p>
+                    <h4 className="Titulo-card"><strong>SOLICITAR PREVISÕES</strong></h4>
+                    <p className="Frase-card">Utilize nossas ferramentas de previsão para tomar decisões.</p>
+                    <div className='Icone-previsao'>{<IconePrevisao />}</div>
+                    
                 </div>
             </div>
 
-    {/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=    2°    -=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-==-=-=-=-=-==-=-=*/}
+    {/*Card das Assinaturas*/}
 
         <h2 className="tituloPreco"><strong>PREÇO DE ASSINATURA</strong></h2>
-            <div className="planos">
+            <div className="assinaturas">
                 <div className="plano">
                     <h3 className="plano-titulo"><strong>DELUXE</strong></h3>
                     <p className="plano-descricao">
@@ -77,22 +90,25 @@ export function AppIndexPage() {
                 </div>
             </div>
 
-        {/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=    3°    -=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-==-=-=-=-=-==-=-=*/}
+        {/*Card do Contato*/}
 
-        <h2 className="tituloQuinto">Pronto para chegar ao resultados com a gente?</h2>
-        <h3 className="subtituloQuinto">Nos envie uma mensagem!</h3>
-        <div className="gridQuinto">
-            <div className="cardQuinto">
+        <h2 className="titulo-contato">Pronto para chegar ao resultados com a gente?</h2>
+        <h3 className="subtitulo-contato">Nos envie uma mensagem!</h3>
+        <div className="grid-contato">
+            <div className="contato-card">
                 <h4>TELEFONE</h4>
                 <p>+55 (41) 99999-9999</p>
+                {<IconeTelefone />}
             </div>
-            <div className="cardQuinto">
+            <div className="contato-card">
                 <h4>E-MAIL</h4>
                 <p>personal_department@insightAi.com</p>
+                {<IconeEmail />}
             </div>
-            <div className="cardQuinto">
+            <div className="contato-card">
                 <h4>Social</h4> 
                 <p>Redes sociais</p>
+                <div className='icone-social'>{<IconeSocial />}</div>
             </div>
         </div>
 
