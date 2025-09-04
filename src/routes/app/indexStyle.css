@@ -52,6 +52,19 @@
 
 /*Card de Funcionalidades*/
 
+@keyframes sombra-card {
+    0% {
+        box-shadow: 0 15px 8px rgb(255, 254, 254, 0.2);
+    }
+    
+    100% {
+        box-shadow: 0 15px 8px rgba(255, 254, 254, 0.2);
+        transform: translateY(0);
+    }
+}
+
+
+
 .grid {
     display: flex; /* Ativa o Flexbox */
     justify-content: center; /* Centraliza horizontalmente */
@@ -71,14 +84,21 @@
 .card {
     border-width: 3px;
     border-radius: 10px;
-
+    
 }
+
+.card:hover{
+    animation: sombra-card 5s infinite ease-in-out;
+}
+
 
 .Titulo-card {
     font-size: 30px;
     justify-content: center;
     margin-left: 150px;
+    margin-top: 10px;
 }
+
 
 .Frase-card {
     margin-top: 10px;
@@ -89,14 +109,17 @@
 .Icone-previsao {
     width: 50px;
     margin-left: 280px;
+    margin-bottom: 10px;
 }
 
 .Icone-analise {
     margin-left: 280px;
+    margin-bottom: 10px;
 }
 
 .Icone-upload {
     margin-left: 280px;
+    margin-bottom: 10px;
 }
 
 /*Card das Assinaturas*/
@@ -119,6 +142,10 @@
     margin-left: 40px;
     margin-right: 40px;
     font-size: 10px;
+}
+
+.plano:hover{
+    animation: sombra-card 5s infinite ease-in-out;
 }
 
 .plano-titulo {
@@ -168,6 +195,10 @@
     margin-right: 40px;
 }
 
+
+.contato-card:hover{
+    animation: sombra-card 5s infinite ease-in-out;
+}
 
 .icone-social {
     display: grid;
