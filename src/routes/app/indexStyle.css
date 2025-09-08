@@ -31,6 +31,7 @@
     margin-left: 410px;
 }
 
+
 .descricao-produto {
     margin-top: 500px;
 }
@@ -41,7 +42,10 @@
 }
 
 .Icone-grafico {
-    margin-left: 1500px;
+    margin-top: -225px;
+    margin-left: 1000px;
+    display: flex;
+    gap: 30px;
 }
 
 .sobreNos {

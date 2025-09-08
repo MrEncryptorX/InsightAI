@@ -1,4 +1,5 @@
 .settingsPage{
+    
     margin-left: 600px;
     font-size: 30px;
 }
@@ -8,7 +9,9 @@
 }
 
 .user{
-    margin-right: 300px;
+    border-width: 3px;
+    border-radius: 10px;
+    margin-right: 700px;
     margin-top: 200px;
 }
 
