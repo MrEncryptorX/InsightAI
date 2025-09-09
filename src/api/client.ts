@@ -89,10 +89,14 @@ class ApiClient {
     return this.request<Dataset[]>('/datasets');
   }
 
-  // Busca um dataset específico e seu preview
-  async getDataset(id: string): Promise<ApiResponse<{ dataset: Dataset; preview: QueryResult }>> {
-    return this.request<{ dataset: Dataset; preview: QueryResult }>(`/datasets/${id}`);
+    async getDataset(id: string): Promise<ApiResponse<Dataset>> {
+    return this.request<Dataset>(`/datasets/${id}`);
   }
+
+  // Busca um dataset específico e seu preview
+  /*async getDataset(id: string): Promise<ApiResponse<{ dataset: Dataset; preview: QueryResult }>> {
+    return this.request<{ dataset: Dataset; preview: QueryResult }>(`/datasets/${id}`);
+  }*/
 
   // Faz upload de um dataset (arquivo), com suporte a progresso e cancelamento
   async uploadDataset(
