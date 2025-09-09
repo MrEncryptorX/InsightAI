@@ -47,7 +47,7 @@ function App() {
               <Route path="/app/index" element={<AuthGuard><AppIndexPage /></AuthGuard>} />
               <Route path="/app/dashboards" element={<AuthGuard><DashboardsPage /></AuthGuard>} />
               <Route path="/app/datasets" element={<AuthGuard><DatasetsPage /></AuthGuard>} />
-              <Route path="/app/settings" element={<AuthGuard><SettingsPage /></AuthGuard>} />
+              <Route path="/app/settings/*" element={<AuthGuard><SettingsPage /></AuthGuard>} />
               
               {/* Admin routes */}
               <Route path="/admin/*" element={
