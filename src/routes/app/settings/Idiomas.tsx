@@ -1,9 +1,9 @@
-import React from "react";
+/*import React from "react";*/
 
 export function PaginaIdiomas() {
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Configurações de Idioma</h1>
+    <div className="p-6 text-3xl">
+      <h1 className="text-4xl font-bold mb-4">Configurações de Idioma</h1>
       <p className="text-gray-600 mb-6">
         Selecione o idioma preferido para a interface do aplicativo.
       </p>

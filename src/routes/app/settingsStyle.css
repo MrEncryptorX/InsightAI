@@ -4,9 +4,16 @@
     font-size: 30px;
 }
 
+.CongifTitlle{
+    font-size: 25px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
 .TitleSettings{
     margin-top: 40px;
 }
+
 
 .user{
     border-width: 3px;
@@ -40,5 +47,10 @@
 }
 
 .notificacoes p{
+    font-size: 20px;
+}
+
+.settingsSair{
+    margin-top: 750px;
     font-size: 20px;
 }

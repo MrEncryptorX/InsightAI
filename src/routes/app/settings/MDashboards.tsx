@@ -1,4 +1,5 @@
 import React from "react";
+import LapisIcone from "../../../components/icones/lapis";
 
 export function PaginaFavDashboards() {
     const dashboards = [
@@ -10,8 +11,8 @@ export function PaginaFavDashboards() {
     ]
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Seus Dashboards Favoritos</h1>
+    <div className="p-6 text-3xl">
+      <h1 className="text-4xl font-bold mb-4">Seus Dashboards Favoritos</h1>
       <p className="text-gray-600 mb-6">
         Dashboards.
       </p>
@@ -29,9 +30,7 @@ export function PaginaFavDashboards() {
             </div>
 
             {/* Botão de rename que aparece no hover */}
-            <button className="hidden group-hover:inline bg-blue-500 text-white text-sm px-2 py-1 rounded ml-2">
-              Rename
-            </button>
+            <button className="hidden group-hover:inline text-white text-sm px-2 py-1 rounded ml-2"><LapisIcone /></button>
           </li>
         ))}
       </ul>
