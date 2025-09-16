@@ -55,6 +55,11 @@ export interface Dataset {
 }
 
 export interface AnalysisJob {
+  createdAt(createdAt: any): import("react").ReactNode | Iterable<import("react").ReactNode>;
+  favorites: any;
+  tags: any;
+  name: any;
+  description: string;
   id: string;
   orgId: string;
   datasetId: string;

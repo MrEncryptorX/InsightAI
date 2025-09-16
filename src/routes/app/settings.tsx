@@ -3,8 +3,9 @@ import { Routes, Route, NavLink } from 'react-router-dom';
 import { PaginaIdiomas } from './settings/Idiomas';
 import { PaginaFavDashboards } from './settings/MDashboards';
 import { PaginaNotificacoes } from './settings/Notificacoes';
+import { PaginaVozLeitura } from './settings/VozLeitura';
 import NotificacoesIcone from '../../components/icones/settings';
-import VozLeituraIcone from '../../components/icones/VozLeitura';
+import VozLeituraIcone from '../../components/icones/vozleitura';
 import DashboardIcone from '../../components/icones/dashboard';
 import SairIcone from '../../components/icones/Sair';
 
@@ -32,6 +33,7 @@ export function SettingsPage() {
         <Routes>
           <Route path="Idiomas" element={<PaginaIdiomas />} />
           <Route path="MDashboards" element={<PaginaFavDashboards />} />
+          <Route path="VozLeitura" element={<PaginaVozLeitura />} />
           <Route path="sistema" element={<h1>Página de Sistema</h1>} />
           <Route path="Notificacoes" element={<PaginaNotificacoes />} />
         </Routes>

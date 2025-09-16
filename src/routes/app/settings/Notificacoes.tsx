@@ -14,7 +14,7 @@ export function PaginaNotificacoes() {
   ];
 
   return (
-    <div className="p-6">
+    <div className="p-6 text-2xl">
       <h1 className="text-2xl font-bold mb-4">Notificações</h1>
       <p className="text-gray-600 mb-6">
         Selecione quais notificações deseja receber.
