@@ -80,7 +80,7 @@ export function Sidebar({ className }: SidebarProps) {
   const adminNavItems = user?.roles.some(role => ['owner', 'admin'].includes(role.name)) ? [
     {
       title: t('navigation.admin'),
-      href: '/admin',
+      href: '/app/admin',
       icon: Shield,
     },
     {
@@ -254,7 +254,7 @@ export function Sidebar({ className }: SidebarProps) {
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="w-56">
             {/* Opção para acessar o perfil */}
-            <DropdownMenuItem onClick={() => navigate('/app/settings/profile')}>
+            <DropdownMenuItem onClick={() => navigate('/app/profile')}>
               {t('navigation.profile')}
             </DropdownMenuItem>
             <DropdownMenuSeparator />
