@@ -3,6 +3,7 @@ import { PaginaDeletarDashboards } from './admin/dltDashboards';
 import { PaginaControleUsuarios } from './admin/controleUsuarios';
 import { PaginaControleAdministradores } from './admin/crontroleAdmins';
 import { PaginaGerenciadorBanco } from './admin/gerenciarBancos';
+import SairButton from '../../components/button/exitButton';
 
 
 
@@ -21,7 +22,7 @@ export function AdminPage(){
               <NavLink to="logsErro" className="hover:bg-gray-700 p-2 rounded">Logs de Erro do Server</NavLink> {/*logs de erros*/}
               <NavLink to="backupDados" className="hover:bg-gray-700 p-2 rounded">Backup de Dados</NavLink> {/*backup e restauração de dados*/}
               <NavLink to="bloqueioIp" className="hover:bg-gray-700 p-2 rounded">Bloqueio de IP e Firewall</NavLink> {/*bloqueio de ip e firewall*/}
-              
+              <SairButton />
             
             </nav>
           </div>

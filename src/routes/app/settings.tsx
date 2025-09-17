@@ -8,6 +8,7 @@ import NotificacoesIcone from '../../components/icones/settings';
 import VozLeituraIcone from '../../components/icones/vozleitura';
 import DashboardIcone from '../../components/icones/dashboard';
 import SairIcone from '../../components/icones/Sair';
+import SairButton from '../../components/button/exitButton';
 
 export function SettingsPage() {
   return (
@@ -24,7 +25,7 @@ export function SettingsPage() {
           <hr />
           <NavLink to="Notificacoes" className="hover:bg-gray-700 p-2 rounded flex"><NotificacoesIcone />Notificações</NavLink>
           <hr />
-          <NavLink to="/app/dashboards" className="settingsSair text-2xl flex"><SairIcone />Sair</NavLink>
+          <SairButton />
         </nav>
       </div>
 

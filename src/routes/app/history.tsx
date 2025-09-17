@@ -21,16 +21,16 @@ import {
 import { useNavigate } from 'react-router-dom'; // Importa hook para navegação programática
 
 // Componente principal da página de historys
-export function historysPage() {
+export function HistoryPage() {
   const { t } = useTranslation(); // Hook para traduções
   const navigate = useNavigate(); // Hook para navegação
   const [searchQuery, setSearchQuery] = useState(''); // Estado para termo de busca
-  const { data: historysResponse, isLoading, error, refetch } = useHistory(); // Busca historys da API
+  const { data: historyResponse, isLoading, error, refetch } = useHistory(); // Busca historys da API
 
-  const historys = historysResponse?.data || []; // Lista de historys (ou array vazio)
+  const history = historyResponse?.data || []; // Lista de historys (ou array vazio)
 
   // Filtra historys conforme o termo de busca (nome, descrição ou tags)
-  const filteredhistorys = historys.filter(history =>
+  const filteredhistory = history.filter(history =>
     history.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
     history.description?.toLowerCase().includes(searchQuery.toLowerCase()) ||
     history.tags?.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
@@ -38,20 +38,20 @@ export function historysPage() {
 
   // Função para navegar para a criação de novo history
   const handleCreatehistory = () => {
-    navigate('/app/historys/new');
+    navigate('/app/history/new');
   };
 
   // Função para visualizar um history específico
   const handleViewhistory = (historyId: string) => {
-    navigate(`/app/historys/${historyId}`);
+    navigate(`/app/history/${historyId}`);
   };
 
   // Exibe spinner de carregamento enquanto busca history
   if (isLoading) {
     return (
-      <AppShell title={t('history.title')}>
+      <AppShell title={t('Histórico')}>
         <div className="p-6">
-          <LoadingSpinner size="lg" text="Loading history..." />
+          <LoadingSpinner size="lg" text="Carregando Histórico..." />
         </div>
       </AppShell>
     );
@@ -60,11 +60,11 @@ export function historysPage() {
   // Exibe estado de erro caso haja falha ao buscar historys
   if (error) {
     return (
-      <AppShell title={t('history.title')}>
+      <AppShell title={t('Histórico')}>
         <div className="p-6">
           <ErrorState 
-            title="Failed to load historys"
-            message="There was an error loading your history."
+            title="Erro ao carregar histórico"
+            message="Ocorreu um erro ao buscar seus históricos. Tente novamente."
             onRetry={refetch}
           />
         </div>
@@ -74,14 +74,14 @@ export function historysPage() {
 
   // Renderiza a página de history
   return (
-    <AppShell title={t('history.title')}>
+    <AppShell title={t('Histórico')}>
       <div className="p-6 space-y-6">
         {/* Header */}
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold">{t('history.title')}</h1>
             <p className="text-muted-foreground">
-              Manage and view your data history
+              Gerencie e visualize seus históricos.
             </p>
           </div>
           {/* Botão para criar novo history */}
@@ -109,10 +109,10 @@ export function historysPage() {
         </div>
 
         {/* Grid de historys ou estado vazio */}
-        {filteredhistorys.length === 0 ? (
+        {filteredhistory.length === 0 ? (
           <EmptyState
             icon={<BarChart3 className="w-12 h-12" />}
-            title={searchQuery ? 'No historys found' : t('history.noData')}
+            title={searchQuery ? 'No history found' : t('history.noData')}
             description={searchQuery ? 'Try adjusting your search terms' : t('history.createFirst')}
             action={{
               label: t('history.createNew'),
@@ -122,7 +122,7 @@ export function historysPage() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Renderiza cada history como um card */}
-            {filteredhistorys.map((history) => (
+            {filteredhistory.map((history) => (
               <Card key={history.id} className="group hover:shadow-md transition-shadow">
                 <CardHeader className="pb-3">
                   <div className="flex items-start justify-between">
@@ -214,7 +214,9 @@ export function historysPage() {
                         </div>
                       )}
                       {/* Exibe data relativa de criação */}
-                      <span>{formatRelativeTime(history.createdAt)}</span>
+                      <span>
+                        {formatRelativeTime(history.createdAt)}
+                      </span>
                     </div>
                   </div>
                 </CardContent>

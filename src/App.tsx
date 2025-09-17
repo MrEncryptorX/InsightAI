@@ -17,6 +17,7 @@ import  {AppIndexPage}  from './routes/app/index';
 import { DashboardsPage } from './routes/app/dashboards';
 import { DatasetsPage } from './routes/app/datasets';
 import { SettingsPage } from './routes/app/settings';
+import { HistoryPage } from './routes/app/history';
 import { AdminPage } from './routes/app/admin';
 import { ProfilePage } from './routes/app/profile';
 import './i18n';
@@ -48,6 +49,7 @@ function App() {
               <Route path="/app/index" element={<AuthGuard><AppIndexPage /></AuthGuard>} />
               <Route path="/app/dashboards" element={<AuthGuard><DashboardsPage /></AuthGuard>} />
               <Route path="/app/datasets" element={<AuthGuard><DatasetsPage /></AuthGuard>} />
+              <Route path="/app/history" element={<AuthGuard><HistoryPage /></AuthGuard>} />
               <Route path="/app/settings/*" element={<AuthGuard><SettingsPage /></AuthGuard>} />
               <Route path= "/app/profile" element={<AuthGuard><ProfilePage /></AuthGuard>} />
 

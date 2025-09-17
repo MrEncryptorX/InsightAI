@@ -3,6 +3,7 @@ import { Button } from '../../components/ui/button'; // Importa componente de bo
 import { Input } from '../../components/ui/input'; // Importa componente de input reutilizável
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../components/ui/card'; // Importa componentes de card
 import { Link, Navigate, useNavigate } from 'react-router-dom'; // Importa componentes e hooks de navegação do React Router
+import SairButton from '../../components/button/exitButton';
 
 
 
@@ -84,6 +85,7 @@ export function ProfilePage() {
                     </form>
                 </CardContent>
             </Card>
+            <SairButton />
         </div>
     )
 }
